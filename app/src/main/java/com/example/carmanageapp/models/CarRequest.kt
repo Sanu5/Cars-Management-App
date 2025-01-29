@@ -5,5 +5,4 @@ data class CarRequest(
     val description : String,
     val image : List<String>,
     val tags : List<String>,
-    val userId : String
 )

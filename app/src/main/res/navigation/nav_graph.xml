@@ -33,10 +33,18 @@
         <action
             android:id="@+id/action_mainFragment_to_carFragment"
             app:destination="@id/carFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_uploadFragment"
+            app:destination="@id/uploadFragment" />
     </fragment>
     <fragment
         android:id="@+id/carFragment"
         android:name="com.example.carmanageapp.carFragment"
         android:label="fragment_car"
         tools:layout="@layout/fragment_car" />
+    <fragment
+        android:id="@+id/uploadFragment"
+        android:name="com.example.carmanageapp.UploadFragment"
+        android:label="fragment_upload"
+        tools:layout="@layout/fragment_upload" />
 </navigation>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Car Title EditText -->
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/rounded_border"
+        android:hint="Car Title"
+        android:padding="12dp"/>
+
+    <!-- Car Description EditText -->
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:padding="12dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_border"/>
+
+    <!-- Tags EditText -->
+    <EditText
+        android:id="@+id/etTags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tags (comma-separated)"
+        android:padding="12dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_border"/>
+
+    <!-- RecyclerView for image previews -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewImages"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"/>
+
+    <!-- Add Images Button -->
+    <Button
+        android:id="@+id/btnAddImages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Add Images"
+        android:layout_gravity="center_horizontal"/>
+
+    <!-- Submit Button to upload the car -->
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Upload Car" />
+
+</LinearLayout>
