@@ -1,6 +1,7 @@
 package com.example.carmanageapp.di
 
 import com.example.carmanageapp.api.AuthInterceptor
+import com.example.carmanageapp.api.CarApi
 import com.example.carmanageapp.api.UserApi
 import com.example.carmanageapp.utils.Constants.BASE_URL
 import dagger.Module
@@ -34,5 +35,11 @@ class NetworkModule {
     @Provides
     fun provideUserApi(retrofitBuilder: Retrofit.Builder): UserApi{
         return retrofitBuilder.build().create(UserApi::class.java)
+    }
+
+    @Singleton
+    @Provides
+    fun provideCarApi(retrofitBuilder: Retrofit.Builder, okHttpClient: OkHttpClient): CarApi{
+        return retrofitBuilder.client(okHttpClient).build().create(CarApi::class.java)
     }
 }
